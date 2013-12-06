@@ -15,7 +15,7 @@ Install the necessary dependencies
 
 ---
 
-**1:** If you are running Mountain Lion, Mavericks, or higher, you will
+<sup>1</sup> If you are running Mountain Lion, Mavericks, or higher, you will
 need to install the latest version of this driver found in [this
 blog post][2] by using this direct link
 [http://xhd.cvs.sourceforge.net/viewvc/xhd/xhd/Release/xhd_2_0_0.dmg?revision=1.3.](http://xhd.cvs.sourceforge.net/viewvc/xhd/xhd/Release/xhd_2_0_0.dmg?revision=1.3)
@@ -24,7 +24,7 @@ blog post][2] by using this direct link
 
 ### Compile and Intsall
 
-Then, install this program by running
+Install this program by running
 
     git clone git://github.com/bahamas10/XBMCXboxHIDController.git
     cd XBMCXboxHIDController
