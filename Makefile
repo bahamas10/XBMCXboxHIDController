@@ -7,7 +7,7 @@ install:
 	cp build/Release/$(prog) /usr/bin
 
 uninstall:
-	rm /usr/bin/$(prog)
+	rm -f /usr/bin/$(prog)
 
 clean:
 	rm -rf build
