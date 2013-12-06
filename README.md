@@ -6,15 +6,23 @@ Control XBMC using an original Xbox controller on OS X
 Installation
 ------------
 
-First, install the necessary dependencies
+### Dependencies
+
+Install the necessary dependencies
 
 - Install [XCode][0] or have `xcodebuild` available in your `$PATH`
 - Install the [Xbox HID controller][1] driver<sup>1</sup>
+
+---
 
 **1:** If you are running Mountain Lion, Mavericks, or higher, you will
 need to install the latest version of this driver found in [this
 blog post][2] by using this direct link
 [http://xhd.cvs.sourceforge.net/viewvc/xhd/xhd/Release/xhd_2_0_0.dmg?revision=1.3.](http://xhd.cvs.sourceforge.net/viewvc/xhd/xhd/Release/xhd_2_0_0.dmg?revision=1.3)
+
+---
+
+### Compile and Intsall
 
 Then, install this program by running
 
