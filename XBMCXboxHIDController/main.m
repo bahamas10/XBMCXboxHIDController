@@ -17,8 +17,8 @@ void print_usage(FILE *stream) {
     fprintf(stream, "options\n");
     fprintf(stream, "  -d <deadzone>   deadzone percentage for analog sicks, defaults to 30\n");
     fprintf(stream, "  -h              print this message and exit\n");
-    fprintf(stream, "  -H <host>       host on which to listen, defaults to 127.0.0.1\n");
-    fprintf(stream, "  -p <port>       port on which to listen, defaults to 9777\n");
+    fprintf(stream, "  -H <host>       UDP host to send events to, defaults to 127.0.0.1\n");
+    fprintf(stream, "  -p <port>       UDP port to send events to, defaults to 9777\n");
     fprintf(stream, "  -v              enable verbose logging\n");
 }
 
