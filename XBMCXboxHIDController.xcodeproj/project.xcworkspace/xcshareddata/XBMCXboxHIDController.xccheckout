@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F26456DC-4A4C-4122-8141-0610FD022EEE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XBMCXboxHIDController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C11DA413-4811-44C3-BC75-1B11B5B45286</key>
+		<string>ssh://github.com/bahamas10/XBMCXboxHIDController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XBMCXboxHIDController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C11DA413-4811-44C3-BC75-1B11B5B45286</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/bahamas10/XBMCXboxHIDController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C11DA413-4811-44C3-BC75-1B11B5B45286</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C11DA413-4811-44C3-BC75-1B11B5B45286</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XBMCXboxHIDController</string>
+		</dict>
+	</array>
+</dict>
+</plist>

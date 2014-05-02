@@ -6,9 +6,13 @@
 //  Copyright (c) 2013 Dave Eddy. All rights reserved.
 //
 
+#define APP_NAME @"XBMC"
+
 #import "XBMCXboxHIDController.h"
 #include "xbmcclient.h"
 
+#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 #import <IOKit/hid/IOHIDLib.h>
 
 #define LOG(fmt, ...) do { if (self.debug) printf("%s\n", [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]); } while (0)
@@ -31,6 +35,7 @@
     int port = 9777;
     self.deadzone = 30;
     self.debug = NO;
+    self.always = NO;
 
     if (options[@"host"])
         host = [options[@"host"] UTF8String];
@@ -40,11 +45,28 @@
         self.deadzone = [options[@"deadzone"] integerValue];
     if ([options[@"debug"] boolValue])
         self.debug = YES;
+    if ([options[@"always"] boolValue])
+        self.debug = YES;
+    
+    self.xbmcHasFocus = NO;
+    
+    NSNotificationCenter *center = NSWorkspace.sharedWorkspace.notificationCenter;
+    [center addObserver:self
+               selector:@selector(activateApplicationNotification:)
+                   name:NSWorkspaceDidActivateApplicationNotification
+                 object:nil];
 
     xbmc = CXBMCClient(host, port);
     xbmc.SendHELO("XBMCXboxHIDController", ICON_NONE);
 
     return self;
+}
+
+- (void)activateApplicationNotification:(NSNotification *)d
+{
+    NSRunningApplication *app = d.userInfo[NSWorkspaceApplicationKey];
+    self.xbmcHasFocus = [app.localizedName isEqualToString:APP_NAME];
+    LOG(@"%@ is %@ focus", APP_NAME, self.xbmcHasFocus ? @"in" : @"not in");
 }
 
 - (id)init
@@ -73,6 +95,9 @@ void gamepadAction(void* inContext, IOReturn inResult, void* inSender, IOHIDValu
 
 - (void)buttonPressed:(int)button withValue:(long)value
 {
+    if (!self.xbmcHasFocus)
+        return;
+    
     // modify certain values to be acceptable to XBMC
     switch (button) {
         case XBOX_RAS_X: case XBOX_RAS_Y:

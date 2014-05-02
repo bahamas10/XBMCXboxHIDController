@@ -11,6 +11,7 @@
 		5587AE2818512C370074E983 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5587AE2718512C370074E983 /* IOKit.framework */; };
 		5587AE2D18512C7F0074E983 /* XBMCXboxHIDController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5587AE2918512C7F0074E983 /* XBMCXboxHIDController.mm */; };
 		5587AE2E18512C7F0074E983 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587AE2A18512C7F0074E983 /* main.m */; };
+		55F28A04191453170081FF02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F28A03191453170081FF02 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		5587AE2A18512C7F0074E983 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5587AE2B18512C7F0074E983 /* XBMCXboxHIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBMCXboxHIDController.h; sourceTree = "<group>"; };
 		5587AE2C18512C7F0074E983 /* xbmcclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xbmcclient.h; sourceTree = "<group>"; };
+		55F28A03191453170081FF02 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F28A04191453170081FF02 /* AppKit.framework in Frameworks */,
 				5587AE2818512C370074E983 /* IOKit.framework in Frameworks */,
 				5587AE1A18512BEE0074E983 /* Foundation.framework in Frameworks */,
 			);
@@ -69,6 +72,7 @@
 		5587AE1818512BEE0074E983 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55F28A03191453170081FF02 /* AppKit.framework */,
 				5587AE2718512C370074E983 /* IOKit.framework */,
 				5587AE1918512BEE0074E983 /* Foundation.framework */,
 			);
@@ -259,6 +263,7 @@
 				5587AE2618512BEE0074E983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

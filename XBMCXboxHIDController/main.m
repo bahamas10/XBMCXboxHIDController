@@ -15,6 +15,7 @@ void print_usage(FILE *stream) {
     fprintf(stream, "control XBMC using an original Xbox controller\n");
     fprintf(stream, "\n");
     fprintf(stream, "options\n");
+    fprintf(stream, "  -a              always send events, default is to only send events when XBMC has the foreground\n");
     fprintf(stream, "  -d <deadzone>   deadzone percentage for analog sicks, defaults to 30\n");
     fprintf(stream, "  -h              print this message and exit\n");
     fprintf(stream, "  -H <host>       UDP host to send events to, defaults to 127.0.0.1\n");
@@ -24,13 +25,15 @@ void print_usage(FILE *stream) {
 
 int main(int argc, char *argv[])
 {
+    BOOL always = NO;
     BOOL debug = NO;
     int port = 9777;
     int deadzone = 30;
     char *host = "127.0.0.1";
     int c;
-    while ((c = getopt(argc, argv, "d:hH:p:v")) != EOF) {
+    while ((c = getopt(argc, argv, "ad:hH:p:v")) != EOF) {
         switch (c) {
+            case 'a': always = YES; break;
             case 'd': deadzone = atoi(optarg); break;
             case 'h': print_usage(stdout); return 0;
             case 'H': host = optarg; break;
@@ -44,6 +47,7 @@ int main(int argc, char *argv[])
     XBMCXboxHIDController *main;
 
     NSDictionary *options = @{
+                              @"always": always ? @YES : @NO,
                               @"debug": debug ? @YES : @NO,
                               @"host": [NSString stringWithUTF8String:host],
                               @"port": [NSNumber numberWithInt:port],

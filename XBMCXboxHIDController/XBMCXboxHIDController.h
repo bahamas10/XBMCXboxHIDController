@@ -32,6 +32,8 @@
 @interface XBMCXboxHIDController : NSObject
 @property (assign, nonatomic) NSInteger deadzone;
 @property (assign, nonatomic) BOOL debug;
+@property (assign, nonatomic) BOOL always;
+@property (assign, nonatomic) BOOL xbmcHasFocus;
 - (id)initWithOptions:(NSDictionary *)options;
 - (void)setupGamepad;
 @end
