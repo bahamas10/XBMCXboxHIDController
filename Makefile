@@ -1,13 +1,18 @@
-prog = XBMCXboxHIDController
-all:
+NAME = XBMCXboxHIDController
+OUT = ./build/Release/$(NAME)
+PROG = /usr/bin/$(NAME)
+
+OUT:
 	xcodebuild
-	@echo "./build/Release/$(prog)"
+	@echo $(OUT)
 
 install:
-	cp build/Release/$(prog) /usr/bin
+	cp $(OUT) $(PROG)
 
 uninstall:
-	rm -f /usr/bin/$(prog)
+	rm -f $(PROG)
 
 clean:
 	rm -rf build
+
+.PHONY: install uninstall clean
